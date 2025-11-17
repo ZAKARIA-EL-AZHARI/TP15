@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/banque-service/src/main/java/ma/projet/graph/entities/Compte.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/banque-service/src/main/java/ma/projet/graph/entities/Compte.java" />
+              <option name="originalContent" value="package ma.projet.graph.entities;&#10;&#10;import jakarta.persistence.*;&#10;import lombok.AllArgsConstructor;&#10;import lombok.Data;&#10;import lombok.NoArgsConstructor;&#10;&#10;import java.util.Date;&#10;&#10;@Entity&#10;@Data&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;public class Compte {&#10;    @Id&#10;    @GeneratedValue(strategy = GenerationType.IDENTITY)&#10;    private Long id;&#10;    private double solde;&#10;&#10;    @Temporal(TemporalType.DATE)&#10;    private Date dateCreation;&#10;&#10;    @Enumerated(EnumType.STRING)&#10;    private TypeCompte type;&#10;&#10;    public Compte(Object o, double v, TypeCompte typeCompte) {&#10;    }&#10;}" />
+              <option name="updatedContent" value="package ma.projet.graph.entities;&#10;&#10;import jakarta.persistence.*;&#10;import lombok.AllArgsConstructor;&#10;import lombok.Data;&#10;import lombok.NoArgsConstructor;&#10;&#10;import java.util.Date;&#10;&#10;@Entity&#10;@Data&#10;@NoArgsConstructor&#10;@AllArgsConstructor&#10;public class Compte {&#10;    @Id&#10;    @GeneratedValue(strategy = GenerationType.IDENTITY)&#10;    private Long id;&#10;    private double solde;&#10;&#10;    @Temporal(TemporalType.DATE)&#10;    private Date dateCreation;&#10;&#10;    @Enumerated(EnumType.STRING)&#10;    private TypeCompte type;&#10;&#10;    public Compte(Long id, double solde, TypeCompte type) {&#10;        this.id = id;&#10;        this.solde = solde;&#10;        this.dateCreation = new Date();&#10;        this.type = type;&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/banque-service/src/main/resources/application.properties">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/banque-service/src/main/resources/application.properties" />
+              <option name="originalContent" value="&#10;spring.application.name=banque-service&#10;spring.datasource.url=jdbc:h2:mem:Banque&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;spring.jpa.database-platform=org.hibernate.dialect.H2Dialect&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;server.port=8082&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.graphql.graphiql.enabled=true&#10;spring.graphql.schema.locations=classpath:graphql/&#10;&#10;" />
+              <option name="updatedContent" value="&#10;spring.application.name=banque-service&#10;spring.datasource.url=jdbc:h2:mem:banque&#10;spring.datasource.driverClassName=org.h2.Driver&#10;spring.datasource.username=sa&#10;spring.datasource.password=&#10;spring.jpa.database-platform=org.hibernate.dialect.H2Dialect&#10;spring.h2.console.enabled=true&#10;spring.h2.console.path=/h2-console&#10;server.port=8082&#10;spring.jpa.hibernate.ddl-auto=update&#10;spring.graphql.graphiql.enabled=true&#10;spring.graphql.schema.locations=classpath:graphql/&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
